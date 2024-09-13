@@ -62,7 +62,7 @@ async function openArticleInNewTab(url) {
             return;
         }
 
-        const { title, summary } = data;
+        const { title, summary, category } = data;
 
         // Open a new window or tab
         const newWindow = window.open("", "_blank");
@@ -88,6 +88,7 @@ async function openArticleInNewTab(url) {
             <body>
                 <h1>${title}</h1>
                 <p>${summary}</p>
+                <h1>${category}</h1>
             </body>
             </html>
         `);

@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,600;1,600&family=Oswald:wght@700&display=swap" rel="stylesheet">
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </head>
 <body>
     <nav>
@@ -20,8 +20,10 @@
             <li><a href="#local-news">LOCAL NEWS</a></li>
             <li><a href="#politics">POLITICS</a></li>
             <li><a href="#business">BUSINESS</a></li>
-            <li><a href="#business">TECHNOLOGY</a></li>
-            <li><a href="#business">ENTERTAINMENT</a></li>
+            <li class="dropdown">
+                <a href="#">CATEGORIES</a>
+            </li>
+            <li><a href="#following-categories" id="following-categories">FOLLOWING CATEGORIES</a></li>
         </ul>
     </nav>
     <h1>News at a Glance: Your Daily Briefing</h1>
@@ -30,6 +32,10 @@
         <div id="news-display" style="display:none;">
             <h2 id="display-title"></h2>
             <p id="display-content"></p>
+        </div>
+        <div id="following-categories" style="display:none;">
+            <h2>Following Categories</h2>
+            <ul id="following-list"></ul>
         </div>
     </main>
     <template id="template-news-card">

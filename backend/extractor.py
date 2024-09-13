@@ -95,6 +95,7 @@ class Extractor():
         if article_content:
             return BeautifulSoup(" ".join([str(tag) for tag in article_content]), 'lxml')
         return soup
+
     def __get_title(self, soup) -> str:
         """ Extract the article title based on h1-h6 tags or <title> """
         title = ''
