@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Summarizer</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,600;1,600&family=Oswald:wght@700&display=swap" rel="stylesheet">
+    <script src="script.js"></script>
+</head>
+<body>
+    <nav>
+        <img src="logo.jpg" alt="Logo" class="logo">
+        <ul>
+            <li><a href="#home">HOME</a></li>
+            <li><a href="#breaking-news">BREAKING NEWS</a></li>
+            <li><a href="#world-news">WORLD NEWS</a></li>
+            <li><a href="#local-news">LOCAL NEWS</a></li>
+            <li><a href="#politics">POLITICS</a></li>
+            <li><a href="#business">BUSINESS</a></li>
+            <li><a href="#business">TECHNOLOGY</a></li>
+            <li><a href="#business">ENTERTAINMENT</a></li>
+        </ul>
+    </nav>
+    <h1>News at a Glance: Your Daily Briefing</h1>
+    <main>
+        <div class="cards-container container flex" id="cards-container"> 
+        </div>
+    </main>
+    <template id="template-news-card">
+        <div class="card">
+            <div class="card-header">
+                <img src="https://via.placeholder.com/400x200" alt="news-image" id="news-img">
+            </div>
+            <div class="card-content">
+                <h3 id="news-title">This is the Title</h3>
+                <h6 class="news-source" id="news-source">End Gadget 26/08/2023</h6>
+                <p class="news-desc" id="news-desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae saepe quis voluptatum quisquam vitae doloremque facilis molestias quae ratione cumque!</p>
+            </div>
+        </div>
+    </template>
+</body>
+</html>

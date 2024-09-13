@@ -1,0 +1,139 @@
+body{
+    background-image: linear-gradient(to right, #ffefba, #dcd7d7b1);
+    margin: 0;
+    padding: 0 50px; 
+}
+@font-face {
+    font-family: 'Satoshi-Bold';
+    src: url('/fonts/Satoshi-Bold.woff2') format('woff2'),
+        url('/fonts/Satoshi-Bold.woff') format('woff'),
+        url('/fonts/Satoshi-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-display: swap;
+    font-style: normal;
+}
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 0%;
+    }
+    25% {
+        background-position: 100% 0%;
+    }
+    50% {
+        background-position: 0% 100%;
+    }
+    75% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+h1{
+    text-align: center;
+    background: linear-gradient(90deg, #20a8ce, #09ec89); /* Darker colors */
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    font-family: 'Satoshi-Bold', sans-serif; /* Apply Tanker-Regular font */
+    font-weight: bold; /* Ensure text is bold */
+    font-size: 4rem; /* Adjust as needed for impact */
+    /*letter-spacing: 0.1em; /* Adjust letter spacing as needed */
+    animation: gradientMove 6s ease infinite; /* Adjust duration and easing as needed */
+    margin: 0;
+}
+nav {
+    border-radius: 8px; /* Smooth corners */
+    padding: 10px 20px; /* Space around the content */
+    margin: 0 auto; /* Centered and space from top */
+    max-width: 1200px; /* Max width for large screens */
+    display: flex; /* Align items horizontally */
+    align-items: center; /* Vertically center items */
+}
+
+nav .logo {
+    height: 100px; /* Adjust the height of the logo as needed */
+    border-radius: 50%;
+    margin-right: 20px; /* Space between the logo and the navigation links */
+}
+
+nav ul {
+    list-style: none; /* Remove bullet points */
+    padding: 0;
+    margin: 0;
+    display: flex; /* Display items horizontally */
+    justify-content: space-around; /* Space items equally */
+}
+
+nav li {
+    margin: 0;
+}
+
+nav a {
+    text-decoration: none; /* Remove underline from links */
+    color: #333; /* Dark color for text */
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: larger;
+    padding: 10px 15px; /* Space inside links */
+    display: block; /* Make links block-level for padding */
+    transition: transform 0.6s ease, background-color 0.6s ease; /* Slow transition */
+    border-radius: 10px; /* Ensure consistent rounding */
+}
+
+nav a:hover {
+    background-color: rgb(0, 255, 55); /* Light background on hover */
+    border-radius: 10px; /* Rounded corners on hover */
+    transform: translateY(-5px); /* Move text up */
+}
+
+main {
+    padding-block: 20px;
+    margin-top: 10px;
+}
+
+.cards-container {
+    display: flex; /* Align items horizontally */
+    flex-wrap: wrap; /* Allow wrapping to new lines if necessary */
+    gap: 20px; /* Space between cards */
+    justify-content: space-between; /* Space out cards horizontally */
+}
+
+.card {
+    width: 360px;
+    min-height: 400px;
+    box-shadow: 0 0 4px #d4ecff;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: "Arimo", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    background-color: #f9f6f0;
+    overflow: hidden;
+    transition: all 0.5s ease;
+}
+
+.card:hover {
+    box-shadow: 1px 1px 8px #d4ecff;
+    background-color: #f9fdff;
+    transform: translateY(-2px);
+}
+
+.card-header img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 12px;
+}
+
+.news-source {
+    margin-block: 12px;
+}
