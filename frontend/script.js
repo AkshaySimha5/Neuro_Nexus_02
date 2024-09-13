@@ -53,6 +53,7 @@ function fillDataInCard(cardClone, article) {
 
 async function openArticleInNewTab(url) {
     try {
+        // Fetch the article summary and title
         const res = await fetch(`${backendUrl}?url=${encodeURIComponent(url)}`);
         const data = await res.json();
 
@@ -61,8 +62,19 @@ async function openArticleInNewTab(url) {
             return;
         }
 
-        const { title, content } = data;
+        const { title, summary } = data;
+
+        // Open a new window or tab
         const newWindow = window.open("", "_blank");
+
+        // Check if the window was successfully created
+        if (!newWindow) {
+            console.error("Popup blocked or failed to open a new window");
+            alert("Please allow popups for this website.");
+            return;
+        }
+
+        // Write the article details to the new window
         newWindow.document.write(`
             <html>
             <head>
@@ -75,18 +87,23 @@ async function openArticleInNewTab(url) {
             </head>
             <body>
                 <h1>${title}</h1>
-                <p>${content}</p>
+                <p>${summary}</p>
             </body>
             </html>
         `);
+
+        // Close the document stream so that it loads correctly
         newWindow.document.close();
     } catch (error) {
         console.error("Error fetching article content:", error);
     }
 }
 
+
+
 async function fetchArticleContent(url) {
     try {
+        // Fetch the title and summary instead of content
         const res = await fetch(`${backendUrl}?url=${encodeURIComponent(url)}`);
         const data = await res.json();
 
@@ -95,19 +112,21 @@ async function fetchArticleContent(url) {
             return;
         }
 
-        showArticleDetails(data.title, data.content);
+        showArticleDetails(data.title, data.summary
+        );
     } catch (error) {
         console.error("Error fetching article content:", error);
     }
 }
 
-function showArticleDetails(title, content) {
+function showArticleDetails(title, summary) {
     const displaySection = document.getElementById("news-display");
     const displayTitle = document.getElementById("display-title");
     const displayContent = document.getElementById("display-content");
 
+    // Set title and summary (not content)
     displayTitle.textContent = title;
-    displayContent.textContent = content;
+    displayContent.textContent = summary;
 
     displaySection.style.display = "block";
 }

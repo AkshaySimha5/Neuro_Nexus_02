@@ -1,6 +1,6 @@
 from flask import Flask, jsonify, request
 from flask_cors import CORS  # Import CORS
-from article_extractor import parse  # Import the parse function from article_extractor
+from merge import parse, summarize_article  # Import summarize_article
 
 app = Flask(__name__)
 CORS(app)  # Enable CORS for the Flask app
@@ -10,9 +10,20 @@ def fetch_article():
     url = request.args.get('url')
     if not url:
         return jsonify({'error': 'URL parameter is required'}), 400
+    
     try:
+        # Extract title and content using parse()
         title, content = parse(url=url)
-        return jsonify({'title': title, 'content': content})
+
+        if not content:
+            return jsonify({'error': 'Failed to extract content from the article'}), 500
+
+        # Summarize the content
+        summary = summarize_article(content)
+        print(summary)
+        # Return the title and summary as a JSON response
+        return jsonify({'title': title, 'summary': summary})
+
     except Exception as e:
         return jsonify({'error': str(e)}), 500
 
