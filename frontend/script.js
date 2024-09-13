@@ -156,3 +156,9 @@ searchButton.addEventListener("click", () => {
     }
     curSelectedNav = null;
 });
+
+function openCategoryPage(category) {
+    // Open a new page and pass the selected category as a query parameter
+    const url = `news.html?category=${category}`;
+    window.open(url, '_blank');
+}
