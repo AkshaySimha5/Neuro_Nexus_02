@@ -50,6 +50,7 @@ nav {
     max-width: 1200px; /* Max width for large screens */
     display: flex; /* Align items horizontally */
     align-items: center; /* Vertically center items */
+    justify-content: center;
 }
 
 nav .logo {

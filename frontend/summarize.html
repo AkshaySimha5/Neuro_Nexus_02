@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Summarize</title>
+    <link rel="stylesheet" href="summarize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,600;1,600&family=Oswald:wght@700&display=swap" rel="stylesheet">
+    <script src="summarize.js" defer></script>
+</head>
+<body>
+    <nav>
+        <img src="logo.jpg" alt="Logo" class="logo">
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="summarize.html">TRY HERE</a></li>
+        </ul>
+    </nav>
+    <h1>Summarize a News Article</h1>
+
+    <!-- URL form acceptor -->
+    <div class="container">
+        <div class="entry-area">
+            <input type="text" id="url-input" required placeholder="Enter URL">        </div>
+        <button id="summarize-btn">SUBMIT</button>
+    </div>
+
+    <!-- Area where the summary and title will be displayed -->
+    <div id="summary-section" style="display: none;">
+        <h2 id="article-title"></h2>
+        <p id="article-summary"></p>
+        <p id="article-category"></p>
+    </div>
+
+</body>
+</html>

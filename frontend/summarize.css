@@ -1,0 +1,176 @@
+/* General Body Styling */
+body {
+  background-image: linear-gradient(to right, #ffefba, #dcd7d7b1);
+  margin: 0;
+  padding: 0 50px; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  font-family: 'Arimo', sans-serif;
+}
+
+@font-face {
+  font-family: 'Satoshi-Bold';
+  src: url('/fonts/Satoshi-Bold.woff2') format('woff2'),
+      url('/frontend/fonts/Satoshi-Black.woff2') format('woff2');
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}
+
+h1 {
+  text-align: center;
+  background: linear-gradient(90deg, #20a8ce, #09ec89);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  font-family: 'Satoshi-Bold', sans-serif;
+  font-weight: bold;
+  font-size: 4rem;
+  animation: gradientMove 6s ease infinite;
+  margin: 0;
+}
+
+nav {
+  border-radius: 8px;
+  padding: 10px 20px;
+  margin: 20px 0;
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+nav .logo {
+  height: 80px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+nav li {
+  margin: 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-family: "Oswald", sans-serif;
+  font-weight: 700;
+  font-size: larger;
+  padding: 10px 15px;
+  display: block;
+  transition: transform 0.6s ease, background-color 0.6s ease;
+  border-radius: 10px;
+}
+
+nav a:hover {
+  background-color: rgb(0, 255, 55);
+  transform: translateY(-5px);
+}
+
+.container {
+  margin-top: 40px;
+  width: 100%;
+  max-width: 700px;
+  text-align: center;
+}
+
+.entry-area {
+  position: relative;
+  height: 80px;
+}
+
+input {
+  width: 100%;
+  outline: none;
+  font-size: 1.5rem;
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px solid #ccc;
+  background: transparent;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+input:hover, input:focus {
+  transform: translateY(-5px);
+  border-color: #20a8ce;
+}
+
+#summarize-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  background-color: #20a8ce;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  font-family: "Oswald", sans-serif;
+}
+
+#summarize-btn:hover {
+  background-color: #09ec89;
+  transform: translateY(-5px);
+}
+
+/* Summary Section */
+#summary-section {
+  margin-top: 40px;
+  text-align: center;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#article-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #20a8ce;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  animation: fadeIn 1s ease;
+}
+
+#article-summary {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  text-align: justify;
+  color: #333;
+  animation: fadeIn 1s ease;
+}
+
+#article-category {
+  margin-top: 20px;
+  font-size: 1.1rem;
+  font-style: italic;
+  color: #666;
+  animation: fadeIn 1.2s ease;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
