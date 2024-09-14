@@ -8,6 +8,23 @@
     <script src="newsScript.js" defer></script>
 </head>
 <body>
+    <nav>
+        <img src="logo.jpg" alt="Logo" class="logo">
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <!--<li><a href="#breaking-news">BREAKING NEWS</a></li>
+            <li><a href="#local-news">LOCAL NEWS</a></li> -->
+            <li><a href="#politics" onclick="openCategoryPage('politics')">POLITICS</a></li>
+            <li><a href="#business" onclick="openCategoryPage('business')">BUSINESS</a></li>
+            <li><a href="#sports" onclick="openCategoryPage('sports')">SPORTS</a></li>
+            <li><a href="#entertainment" onclick="openCategoryPage('entertainment')">ENTERTAINMENT</a></li>
+            <li><a href="#health" onclick="openCategoryPage('health')">HEALTH</a></li>
+            <li class="dropdown">
+                <a href="#">CATEGORIES</a>
+            </li>
+            <li><a href="summarize.html" target="_blank">TRY HERE</a></li>
+        </ul>
+    </nav>
     <h1>News Articles</h1>
     <main>
         <div class="cards-container container flex" id="news-cards-container"></div>

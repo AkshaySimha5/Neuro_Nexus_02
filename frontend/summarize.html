@@ -18,20 +18,23 @@
             <li><a href="summarize.html">TRY HERE</a></li>
         </ul>
     </nav>
+
     <h1>Summarize a News Article</h1>
 
     <!-- URL form acceptor -->
     <div class="container">
         <div class="entry-area">
-            <input type="text" id="url-input" required placeholder="Enter URL">        </div>
+            <input type="text" id="url-input" required placeholder="Enter URL">
+        </div>
         <button id="summarize-btn">SUBMIT</button>
     </div>
 
-    <!-- Area where the summary and title will be displayed -->
+    <!-- Area where the summary, title, category, and sentiment will be displayed -->
     <div id="summary-section" style="display: none;">
         <h2 id="article-title"></h2>
         <p id="article-summary"></p>
         <p id="article-category"></p>
+        <p id="article-sentiment"></p> <!-- New area for sentiment -->
     </div>
 
 </body>
